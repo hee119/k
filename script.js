@@ -1,25 +1,24 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const productGrid = document.querySelector(".product-grid");
+document.addEventListener('DOMContentLoaded', () => {
+    const productGrid = document.querySelector('.product-grid');
 
-    for (let i = 1; i <= 10; i++) {
-        const productCard = document.createElement("div");
-        productCard.classList.add("product-card");
-        productCard.dataset.name = `Component ${i}`;
-        productCard.id = `node-5-${74 + i}`;
+    // Sample data for products
+    const products = Array.from({ length: 10 }, (_, i) => ({
+        rank: i + 1,
+        name: '상품이름',
+        price: '상품가격',
+    }));
 
-        productCard.innerHTML = `
-            <div class="product-image-container" id="node-I5-${74 + i}-5_69"></div>
-            <div class="product-rank" id="node-I5-${74 + i}-5_71">
-                <p>${i}위</p>
-            </div>
-            <div class="product-name" id="node-I5-${74 + i}-5_72">
-                <p>상품이름</p>
-            </div>
-            <div class="product-price" id="node-I5-${74 + i}-5_73">
-                <p>상품가격</p>
-            </div>
+    products.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+
+        card.innerHTML = `
+            <div class="product-image-container"></div>
+            <p class="product-rank">${product.rank}위</p>
+            <p class="product-name">${product.name}</p>
+            <p class="product-price">${product.price}</p>
         `;
 
-        productGrid.appendChild(productCard);
-    }
+        productGrid.appendChild(card);
+    });
 });

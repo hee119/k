@@ -1,27 +1,20 @@
+/* General Body Styles */
 body, html {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
     font-family: 'Inter', 'Noto Sans KR', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
 }
 
-.login-container {
+/* Header Styles */
+header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    max-width: 524px;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.logo-section {
-    margin-bottom: 40px;
+    padding: 10px 50px;
+    background-color: #ff9c39;
+    color: #ffffff;
 }
 
 .logo {
@@ -38,115 +31,143 @@ body, html {
 .logo-text .subtitle {
     font-size: 16px;
     font-weight: 300;
-    color: #000000;
     margin: 0;
 }
 
 .logo-text .title {
     font-size: 32px;
     font-weight: 600;
-    color: #000000;
     margin: 0;
 }
 
-.social-login {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* 버튼 사이의 간격 */
-    margin-bottom: 20px;
-}
-
-.social-btn {
+.search-bar {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 60px;
-    border: none;
-    border-radius: 5px;
-    font-size: 22px;
-    cursor: pointer;
-    padding: 0 20px;
-    box-sizing: border-box;
-    position: relative;
-}
-
-.social-btn img {
-    position: absolute;
-    left: 20px;
-    height: 30px;
-    width: 30px;
-}
-
-.social-btn span {
-    margin: 0 auto;
-}
-
-.kakao {
-    background-color: #f0dd2c;
-    color: #000000;
-}
-
-.naver {
-    background-color: #28d34a;
-    color: #ffffff;
-}
-
-.google {
     background-color: #ffffff;
-    color: #000000;
-    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 999px;
+    padding: 8px 15px;
+    width: 60%;
+    max-width: 746px;
 }
 
-.divider {
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    margin: 0 10px;
+    font-size: 16px;
+    color: rgba(0,0,0,0.3);
+}
+
+.search-bar img {
+    width: 20px;
+    height: 20px;
+}
+
+.user-menu {
     display: flex;
     align-items: center;
-    width: 100%;
-    margin: 20px 0;
 }
 
-.divider hr {
-    flex-grow: 1;
+.user-menu button {
+    background-color: #ff7938;
     border: none;
-    border-top: 1px solid #dbdbdb;
+    border-radius: 40px;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 800;
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.25);
 }
 
-.divider span {
-    padding: 0 15px;
-    font-size: 16px;
-    color: #dbdbdb;
+.cart img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: rgba(255, 156, 57, 0.89);
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
     font-weight: 800;
 }
 
-.local-login {
-    width: 100%;
-}
-
-.login-btn {
+/* Main Content Styles */
+main {
+    padding: 40px 90px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 50px;
+}
+
+section {
     width: 100%;
-    height: 60px;
-    background-color: rgba(255, 156, 57, 0.89);
-    border: 1px solid rgba(0,0,0,0.5);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+/* Popular Products Section */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(115px, 1fr));
+    gap: 50px;
+}
+
+.product-card {
+    width: 115px;
+}
+
+.product-image-container {
+    background-color: rgba(255, 255, 255, 0.94);
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.25);
     border-radius: 5px;
-    color: #ffffff;
-    font-size: 22px;
-    cursor: pointer;
-    padding: 0 20px;
-    box-sizing: border-box;
-    position: relative;
+    height: 115px; /* Assuming a square aspect ratio for the image placeholder */
+    margin-bottom: 10px;
 }
 
-.login-btn img {
-    position: absolute;
-    left: 20px;
-    width: 40px;
-    height: 40px;
+.product-rank {
+    font-weight: 800;
+    font-size: 16px;
 }
 
-.login-btn span {
-    margin: 0 auto;
+.product-name {
+    font-weight: 500;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.product-price {
+    font-weight: 800;
+    font-size: 16px;
+    color: #ff7938;
+}
+
+/* Special Offer Section */
+.special-offer-banner {
+    background-color: #ff0000;
+    border-radius: 10px;
+    height: 430px;
+    width: 100%;
+    max-width: 542px;
 }
